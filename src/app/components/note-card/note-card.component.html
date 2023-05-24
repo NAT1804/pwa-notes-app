@@ -1,11 +1,16 @@
 <div #container class="note-card-container">
   <div class="note-card-content">
-    <h1 class="note-card-title">Title</h1>
-    <div class="note-card-body">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo alias
-      aut eum atque adipisci consequuntur asperiores quae praesentium, aperiam
-      dicta provident sapiente eos? Officiis reiciendis necessitatibus
-      aspernatur praesentium? Maxime, similique?
+    <h1 class="note-card-title">{{ title }}</h1>
+    <div #bodyText class="note-card-body">
+      <p>
+        {{ body }}
+      </p>
+      <div #truncator class="fade-out-truncation"></div>
     </div>
+  </div>
+  <div class="x-button">
+    <span class="icon is-small is-left">
+      <i class="fas fa-times"></i>
+    </span>
   </div>
 </div>

@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { NotesListComponent } from './components/notes-list/notes-list.component';
 import { MainLayoutComponent } from './components/main-layout/main-layout.component';
 import { NoteCardComponent } from './components/note-card/note-card.component';
+import { NoteDetailComponent } from './note-detail/note-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NotesListComponent,
     MainLayoutComponent,
-    NoteCardComponent
+    NoteCardComponent,
+    NoteDetailComponent
   ],
   imports: [
     BrowserModule,
