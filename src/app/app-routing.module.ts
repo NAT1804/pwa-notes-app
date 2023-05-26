@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NotesListComponent } from './components/notes-list/notes-list.component';
 import { MainLayoutComponent } from './components/main-layout/main-layout.component';
+import { NoteDetailComponent } from './components/note-detail/note-detail.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,10 @@ const routes: Routes = [
       {
         path: '',
         component: NotesListComponent,
+      },
+      {
+        path: 'detail',
+        component: NoteDetailComponent,
       },
     ],
   },
