@@ -10,9 +10,10 @@
     </div>
   </div>
 
-  <div class="notes-list">
+  <div class="notes-list" [@listAnim]>
     <app-note-card
       *ngFor="let note of notes; index as i"
+      [@itemAnim]
       [title]="note.title"
       [body]="note.body"
       [link]="i"

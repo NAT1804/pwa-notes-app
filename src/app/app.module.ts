@@ -8,6 +8,7 @@ import { MainLayoutComponent } from './components/main-layout/main-layout.compon
 import { NoteCardComponent } from './components/note-card/note-card.component';
 import { NoteDetailComponent } from './components/note-detail/note-detail.component';
 import { FormsModule } from '@angular/forms'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { FormsModule } from '@angular/forms'
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule
   ],
