@@ -24,8 +24,8 @@ export class NoteDetailComponent implements OnInit {
     this.route.params.subscribe((params: Params) => {
       this.note = new Note();
       if (params['id']) {
-        this.note = this.noteService.get(params['id']);
-        this.noteId = params['id'];
+        this.noteId = Number(params['id'].split("-").pop());
+        this.note = this.noteService.get(this.noteId);
         this.editMode = true;
       } else {
         this.editMode = false;
