@@ -11,14 +11,14 @@ export class MessagingService {
   constructor(private angularFireMessaging: AngularFireMessaging) {}
 
   requestPermission() {
-    this.angularFireMessaging.requestToken.subscribe(
-      (token) => {
+    this.angularFireMessaging.requestToken.subscribe({
+      next: (token) => {
         console.log(token);
       },
-      (err) => {
+      error: (err) => {
         console.log('Unable to get permission to notify..', err);
-      }
-    );
+      },
+    });
   }
 
   receiveMessaging() {

@@ -7,13 +7,13 @@ import { NotesListComponent } from './components/notes-list/notes-list.component
 import { MainLayoutComponent } from './components/main-layout/main-layout.component';
 import { NoteCardComponent } from './components/note-card/note-card.component';
 import { NoteDetailComponent } from './components/note-detail/note-detail.component';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { AngularFireAuthModule } from '@angular/fire/compat/auth'
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireMessagingModule } from '@angular/fire/compat/messaging';
 import { AngularFireModule } from '@angular/fire/compat';
-import { environment } from 'src/environments/environment.development';
+import { environment } from 'src/environments/environment';
 import { MessagingService } from './services/messaging-service';
 
 @NgModule({
@@ -22,7 +22,7 @@ import { MessagingService } from './services/messaging-service';
     NotesListComponent,
     MainLayoutComponent,
     NoteCardComponent,
-    NoteDetailComponent
+    NoteDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,13 +33,13 @@ import { MessagingService } from './services/messaging-service';
       enabled: !isDevMode(),
       // Register the ServiceWorker as soon as the application is stable
       // or after 30 seconds (whichever comes first).
-      registrationStrategy: 'registerWhenStable:30000'
+      registrationStrategy: 'registerWhenStable:30000',
     }),
     AngularFireAuthModule,
     AngularFireMessagingModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
   ],
   providers: [MessagingService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
